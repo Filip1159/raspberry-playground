@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filip's RPi!</title>
+</head>
+<body>
+    <span>Hello from Filip's from RPi!</span>
+    <span>Send me a greeting!</span>
+    <input id="input" type="text" />
+    <button id="send-btn">Send</button>
+
+    <script>
+        const btn = document.querySelector('#send-btn')
+        const input = document.querySelector('#input')
+        btn.addEventListener("click", () => fetch(`/greet/${input.value}`))
+    </script>
+</body>
+</html>
